@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+    p.a{
+        font-style: italic;
+    }
+    p.b{
+        font-style: initial;
+    }
+    
+
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    
+</head>
+<body bgcolor="cyan">
+    <h2><p class="b">List</p></h2>
+            
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <p class="a">Roll_no</p> 
+                </th>
+                <th>
+                    <p class="a">Name</p> 
+                </th>
+                <th>
+                    <p class="a">edit</p> 
+                </th>
+                <th>
+                    <p class="a">delete</p> 
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in school %}
+            <tr>
+                <td>
+                    {{ i.Roll_no }}
+                </td>
+                <td>
+                    {{ i.Name }}
+                </td>
+                <td>
+                    <a href="/edit_view/{{ i.id }}"><p class="a">click here to edit</p></a>
+                </td>
+                <td>
+                    <a href="/delete_view/{{ i.id }}"><p class="a">click here to delete</p></a>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>

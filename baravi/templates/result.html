@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+p.a{
+    font-style: italic;
+}
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+</head>
+<body bgcolor="yellow">
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Welcome To Kolhapur Highschool</h2>
+        Roll_no:<input type="text" name='Roll_no' ><br>
+
+        Name:<input type="text" name='Name'><br>
+        
+        <input type="submit">
+    </form>
+    
+</body>
+</html>
